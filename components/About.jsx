@@ -13,8 +13,8 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">I am a full-stack web developer</p>
           <p className="py-2 text-gray-600">
-            I create simple, beautiful, and functional websites. When I'm not
-            coding, you'll find me painting, watching youtube, reading a book,
+            I create simple, beautiful, and functional websites. When I`'`m not
+            coding, you`'`ll find me painting, watching youtube, reading a book,
             or exploring lakes and cities.
           </p>
           <Link href="/#projects">
