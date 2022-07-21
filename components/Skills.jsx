@@ -8,7 +8,7 @@ import Tailwind from "../public/assets/skills/tailwind.png";
 import Github from "../public/assets/skills/github1.png";
 import Mysql from "../public/assets/skills/mysql.png";
 import Next from "../public/assets/skills/nextjs.png";
-import AWS from "../public/assets/skills/aws.png";
+import Node from "../public/assets/skills/node.png";
 
 const Skills = () => {
   return (
