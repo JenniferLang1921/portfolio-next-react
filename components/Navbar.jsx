@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
+import NavLogo from "../public/assets/jenniferlangmonogram.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -56,7 +57,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             className="py-8"
-            src="/../public/assets/jenniferlangmonogram.png"
+            src={NavLogo}
             alt="/"
             width="75"
             height="75"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import AboutImg from "../public/assets/JenniferLang2-01.png";
 
 const About = () => {
   return (
@@ -13,8 +14,8 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">I am a full-stack web developer</p>
           <p className="py-2 text-gray-600">
-            I create simple, beautiful, and functional websites. When I`'`m not
-            coding, you`'`ll find me painting, watching youtube, reading a book,
+            I create simple, beautiful, and functional websites. When I'm not
+            coding, you'll find me painting, watching youtube, reading a book,
             or exploring lakes and cities.
           </p>
           <Link href="/#projects">
@@ -25,7 +26,7 @@ const About = () => {
         </div>
         <div className="w-full h-auto m-auto">
           <Image
-            src="/../public/assets/JenniferLang2-01.png"
+            src={AboutImg}
             alt="/"
             width="400"
             height="560
