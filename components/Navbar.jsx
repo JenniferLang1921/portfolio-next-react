@@ -114,12 +114,7 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/">
-                <Image
-                  src="/../public/assets/jenniferlangmonogram.png"
-                  alt="/"
-                  width="50"
-                  height="50"
-                />
+                <Image src={NavLogo} alt="/" width="50" height="50" />
               </Link>
               <div
                 onClick={handleNav}

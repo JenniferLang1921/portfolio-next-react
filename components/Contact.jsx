@@ -6,8 +6,38 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import ContactImg from "../public/assets/contactMe.jpg";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const router = useRouter();
+  async function onSubmitForm(values) {
+    let config = {
+      method: "post",
+      url: `${process.env.NEXT_PUBLIC_API_URL}api/contact`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: values,
+    };
+
+    try {
+      const response = await axios(config);
+      console.log(response);
+      if (response.status == 200) {
+        reset();
+      }
+    } catch (err) {}
+  }
+
   return (
     <div id="contact" className="w-full lg:h-screen ">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -65,14 +95,25 @@ const Contact = () => {
           {/*right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form>
+              <form onSubmit={handleSubmit(onSubmitForm)}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 ${
+                        errors.name ? 'background-red-600' : null'}"
                       type="text"
+                      name="name"
+                      {...register("name", {
+                        required: {
+                          value: true,
+                          message: "Name is required.",
+                        },
+                      })}
                     />
+                    <p className="text-red-600 font-bold text-sm py-2">
+                      {errors?.name?.message}
+                    </p>
                   </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">
@@ -81,6 +122,8 @@ const Contact = () => {
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      name="phone"
+                      {...register("phone")}
                     />
                   </div>
                 </div>
@@ -89,13 +132,38 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
+                    name="email"
+                    {...register("email", {
+                      required: {
+                        value: true,
+                        message: "Email is required.",
+                      },
+                      minLength: {
+                        value: 8,
+                        message: "Please enter your email",
+                      },
+                      maxLength: {
+                        value: 120,
+                        message: "Please enter your email",
+                      },
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                        message: "Invalid email address",
+                      },
+                    })}
                   />
+                  <p className="text-red-600 font-bold text-sm py-2">
+                    {errors?.email?.message}
+                  </p>
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Subject</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
+                    name="subject"
+                    {...register("subject")}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -103,7 +171,27 @@ const Contact = () => {
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
+                    name="message"
+                    {...register("message", {
+                      required: {
+                        value: true,
+                        message: "You need to enter a message",
+                      },
+                      minLength: {
+                        value: 50,
+                        message:
+                          "Your message must be longer than 50 characters",
+                      },
+                      maxLength: {
+                        value: 1000,
+                        message:
+                          "Your message can't be more than 1000 characters",
+                      },
+                    })}
                   ></textarea>
+                  <p className="text-red-600 font-bold text-sm py-2">
+                    {errors?.message?.message}
+                  </p>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
                   Send Message
