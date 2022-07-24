@@ -1,6 +1,8 @@
 //export default async (req, res) => {
 //  const { name, email, message, phone } = req.body;
 
+import mail from "@sendgrid/mail";
+
 // const transporter = nodemailer.createTransport({
 //   service: "gmail,",
 //   auth: {
@@ -32,21 +34,21 @@
 
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
-javascript;
+
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const msg = {
-  to: "test@example.com", // Change to your recipient
-  from: "test@example.com", // Change to your verified sender
-  subject: "Sending with SendGrid is Fun",
-  text: "and easy to do anywhere, even with Node.js",
-  html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-};
-sgMail
-  .send(msg)
-  .then(() => {
-    console.log("Email sent");
-  })
-  .catch((error) => {
-    console.error(error);
+
+export default (req, res) => {
+  const body = JSON.parse(req.body);
+
+  await mail.send ({
+    to: "jenniferlang1921@gmail.com", // Change to your recipient
+    from: "jenniferlang1921@gmail.com", // Change to your verified sender
+    subject: "Sending with SendGrid is Fun",
+    text: "and easy to do anywhere, even with Node.js",
+    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
   });
+
+
+  res.status(200).json({ status: "Ok" });
+};
