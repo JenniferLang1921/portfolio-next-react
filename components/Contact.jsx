@@ -9,8 +9,10 @@ import ContactImg from "../public/assets/contactMe.jpg";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useToast } from "../hooks/useToast";
 
 const Contact = () => {
+  const toast = useToast();
   const {
     register,
     handleSubmit,
@@ -35,6 +37,10 @@ const Contact = () => {
       console.log(response);
       if (response.status == 200) {
         reset();
+        toast(
+          "success",
+          "Thank you for contacting us, we will be in touch soon."
+        );
       }
     } catch (err) {}
   }
