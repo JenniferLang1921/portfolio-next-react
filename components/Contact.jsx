@@ -38,10 +38,7 @@ const Contact = () => {
       if (response.status == 200) {
         reset();
 
-        alert(
-          "success",
-          "Thank you for contacting us, we will be in touch soon."
-        );
+        alert("Thank you for contacting us, we will be in touch soon.");
 
         toast(
           "success",
