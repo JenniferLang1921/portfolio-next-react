@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <ToastProvider>
         <Component {...pageProps} />
+        <ToastContainer />
       </ToastProvider>
     </>
   );
