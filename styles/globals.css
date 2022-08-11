@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif; */
   font-weight: 500;
+  color: #000;
 }
 
 @layer base {
@@ -26,6 +28,9 @@ html {
 
   h2 {
     @apply text-3xl sm:text-4xl
+  }
+  p {
+    @apply font-[Roboto]
   }
   
   li {
