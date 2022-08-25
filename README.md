@@ -10,7 +10,9 @@ Jennifer Lang Portfolio is a next.js/react.js site that describes the skills and
 
 Front-End: Next.js, React.js, TailwindCSS, JSX, HTML, Javascript
 
-Back-End: Node.js  
+Back-End: Node.js, SendGrid API for form  
+
+React Hooks: react-hook-form, react-icons, useState
 
 Check out Jennifer Lang Portfolio here https://jenniferlang.site
 
