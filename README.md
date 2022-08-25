@@ -12,5 +12,5 @@ Front-End: Next.js, React.js, TailwindCSS, JSX, HTML, Javascript
 
 Back-End: Node.js  
 
-Check out Kansas City Love here https://jenniferlang.site
+Check out Jennifer Lang Portfolio here https://jenniferlang.site
 
