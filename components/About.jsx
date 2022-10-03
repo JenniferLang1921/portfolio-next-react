@@ -5,7 +5,7 @@ import AboutImg from "../public/assets/JenniferLang2-01.png";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-8">
+    <div id="about" className="w-full md:h-500 p-2 flex items-center py-8">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
@@ -14,11 +14,11 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">I am a full-stack web developer</p>
           <p className="py-2 text-gray-600">
-            I earned my certificate at Full-Stack Web Development Coding
-            Bootcamp at the University of Kansas in 2018. Since then, I have
-            been working as a front-end drupal and full-stack wordpress
-            developer for Agile Technology Solutions at the University of
-            Kansas.
+            I earned my Full-Stack Web Development Coding Bootcamp Certificate
+            at the University of Kansas in 2018. Since then, I have been working
+            as a front-end drupal and full-stack wordpress developer for Agile
+            Technology Solutions at the University of Kansas. I am very
+            interested in Next.js.
           </p>
 
           <Link href="/#projects">
@@ -31,8 +31,8 @@ const About = () => {
           <Image
             src={AboutImg}
             alt="/"
-            width="400"
-            height="560
+            width="300"
+            height="420
             "
           />
         </div>
