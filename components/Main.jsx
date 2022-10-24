@@ -22,14 +22,19 @@ const Main = () => {
       />
       <div className="bg-gradient-to-r from-transparent via-slate-50 to-transparent w-full h-full mx-auto p-2 flex justify-center items-center absolute top-0">
         <div>
-          <p className="uppercase text-sm tracking-widest text-gray-900">
+          <p className="uppercase text-sm tracking-widest text-gray-900 mt-[15%] py-4">
             Let's build something together
           </p>
-          <h1 className="py-4 text-gray-700">
-            Hi, I'm <span className="text-[#5651e5]">Jennifer</span>
+          <h1 className="py-1 md:py-4 text-gray-700 text-2xl md:text-4xl">
+            Hi, I'm{" "}
+            <span className="text-[#5651e5] text-2xl md:text-4xl">
+              Jennifer
+            </span>
           </h1>
-          <h1 className="py-4 text-gray-700">A Full-Stack Web Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <h1 className="py-1 md:py-4 text-gray-700 text-2xl md:text-4xl">
+            A Full-Stack Web Developer
+          </h1>
+          <p className="py-4 text-gray-600 hidden md:block max-w-[70%] m-auto">
             I'm a full-stack developer specializing in building and designing
             exceptional digital experiences. Currently, I’m focused on building
             responsive react.js and next.js front-end web applications while
