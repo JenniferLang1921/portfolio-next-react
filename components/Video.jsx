@@ -6,7 +6,7 @@ const Video = () => {
       <div className="overlay"></div>
 
       <ReactPlayer
-        url="https://youtu.be/xnSb4oVY32I"
+        url="https://youtu.be/bHSWxjjNHeM"
         playing="true"
         loop="true"
         muted="true"

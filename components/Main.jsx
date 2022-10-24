@@ -7,7 +7,10 @@ import ReactPlayer from "react-player";
 
 const Main = () => {
   return (
-    <div id="home" className="w-full h-screen text-center">
+    <div
+      id="home"
+      className="w-full pb-[56.25%] text-center relative overflow-hidden"
+    >
       <ReactPlayer
         url="https://youtu.be/xnSb4oVY32I"
         playing="true"
