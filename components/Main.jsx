@@ -3,10 +3,21 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { AiOutlineBehance } from "react-icons/ai";
+import ReactPlayer from "react-player";
+
 const Main = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+      <ReactPlayer
+        url="https://youtu.be/xnSb4oVY32I"
+        playing="true"
+        loop="true"
+        muted="true"
+        width="100%"
+        height="100%"
+        className="object-cover absolute top-0 right-o left-0"
+      />
+      <div className="bg-gradient-to-r from-transparent via-slate-50 to-transparent w-full h-full mx-auto p-2 flex justify-center items-center absolute top-0">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-900">
             Let's build something together
